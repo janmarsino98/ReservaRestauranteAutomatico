@@ -35,7 +35,7 @@ class Bot():
 
     def select_month(self, month, year, day):
         current_date = ""
-        pattern = "opacity: 0.5"
+        pattern = "^.*opacity: 0.5.*$"
         
         next_date_btn = WebDriverWait(self.driver, 10).until(
                 EC.presence_of_element_located((By.XPATH, "//button[@aria-label='increment month']"))
